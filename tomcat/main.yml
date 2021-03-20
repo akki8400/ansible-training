@@ -1,0 +1,15 @@
+---
+  hosts: all
+  become: yes
+
+
+  tasks:
+  - name: "First test task"
+    stat: 
+      path: /tmp/arun
+    register: stat_data
+
+  - name: "Debug the vars"
+    debug:
+      var: stat_data
+
