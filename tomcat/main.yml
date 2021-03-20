@@ -22,3 +22,10 @@
   
   - debug: 
       var: tom_down
+  
+  - name: "Unzip the downloaded tomcat"
+    unarchive:
+      src: /tmp/apache-tomcat-9.0.44.tar.gz
+      dest: /usr/local/
+      mode: 0777
+      remote_src: True
