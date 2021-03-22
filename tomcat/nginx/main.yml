@@ -1,0 +1,24 @@
+---
+- hosts: all
+  become: yes
+
+
+  tasks:
+  - name: install the latest version of Apache
+    yum:
+      name: nginx
+      state: latest
+
+  - name: "Add html template"
+    template:
+      src: templates/index.html.j2
+      dest: /var/www/html/index.html
+      mode: 0666
+
+  - name: service module
+
+  - name: "Nginx conf update"
+
+  - name: nginx conf syntax validation
+
+  - name: service retsrat if above task is success
